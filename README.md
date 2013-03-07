@@ -6,6 +6,11 @@ Release Note
 
 ### x.x.x
 
+### 1.0.1
+
+- modify gitk option
+-- add --all when gitk was executed
+
 ### 1.0.0
 
 - first version
