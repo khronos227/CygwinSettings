@@ -1,0 +1,22 @@
+"行数表示
+set number
+
+"前の行と同じ分だけインデント
+"set autoindent
+
+"検索時に大文字と小文字を区別しない
+set ignorecase
+
+"tabでインデントする文字数を指定
+set tabstop=3
+set shiftwidth=3
+
+"tabを入力するとスペースに置き換える
+set expandtab
+
+"構文の色分け
+syntax on
+"色の設定
+hi Comment    ctermfg=darkcyan
+hi SpecialKey ctermfg=darkcyan
+hi Directory  ctermfg=darkcyan

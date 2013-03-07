@@ -1,0 +1,18 @@
+#.bashrc の基本設定たち
+
+#自分でインストールしたアプリにパスを通す
+export PATH=${PATH}:/home/takefumi.ota/programs/bin/
+
+#ls を色付け
+alias ls='ls --color'
+
+#grep に行番号と色付け
+alias grep='grep -n --color'
+
+#サクラエディタ利用
+function sakuraCaller(){
+   local FILE=`cygpath -w $1`
+   /home/takefumi.ota/programs/programFilesX86/sakura/sakura ${FILE} &
+}
+alias sakura='sakuraCaller'
+

@@ -1,0 +1,8 @@
+#基本設定
+. ${SETTINGS_DIR}/base_settings
+
+#Gitブランチ表示
+. ${SETTINGS_DIR}/bash_git
+
+#ログ検索
+. ${SETTINGS_DIR}/searchlog

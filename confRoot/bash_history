@@ -1,0 +1,500 @@
+ls
+cd ..
+ls
+rm -rf point-use-diff-checker/
+git clone ssh://git@git.dev.rakuten.com:7999/RMSOPTOOL/point-use-diff-checker.git
+ls
+git branch
+cd point-use-diff-checker/
+git branch
+git checkout -b develop
+ls
+cd src/
+ls
+vi checkPointUseDiff.pl 
+less checkPointUseDiff.pl 
+git add checkPointUseDiff.pl 
+git status
+ls
+cd ..
+ls
+vi README.md 
+git add README.md 
+git commit -m "ファイル名を任意のものでOKに修正。"
+git branch
+git push origin develop
+git checkout master
+git branch
+git merge --no-ff develop
+ls
+ls src/
+ls test/
+cd ..
+cd sr
+cd point-use-diff-checker/
+ls
+cd src/
+ls
+less checkPointUseDiff.pl 
+git branch
+git tag -a 1.0.1
+git push origin master
+git tag
+git push origin --tags
+cd
+ls
+cd files/
+cd
+cd text/
+ls
+cd toban/
+ls
+cd ..
+ls
+cd prodOperation/
+ls
+vi 20130221.txt 
+vi 20130222.txt
+ls
+sakura 20130222.txt &
+cd
+cd files/BO/Hagire/Sale/2013/
+ls
+cd 3_SuperSale/
+sakura release.txt &
+cygstart .
+cygstart .
+cd
+ python
+ls
+cd python/
+ls
+cygstart .
+python diff/diff.py release.txt
+php -version
+ls
+cd
+ls
+cd work/
+ls
+vi compare.php
+vi compare.php
+php compare.php
+vi compare.php
+php compare.php
+vi compare.php
+php compare.php
+vi compare.php
+php compare.php
+php -version
+cd
+ls /usr/bin/
+ls /usr/bin/ | grep wish
+apt-cyg remove tcl-tk
+cd /usr/bin/
+cygstart .
+
+ls /usr/bin/ | grep wish
+ln -s wish84.exe wish
+ls /usr/bin/ | grep wish
+ls -l /usr/bin/ | grep wish
+cd ../share/
+cygstart .
+tar xzf tcl8.4.tar.gz
+tar xzf tk8.4.tar.gz
+cd
+cd git/
+ls
+cd point-use-diff-checker/
+ls
+git k
+gitk
+ls
+cd shscript/loginChecker
+ls
+cd
+vi .bashrc 
+source .bashrc 
+cd shscript/loginChecker
+ls
+cd src/
+ls
+sakura logAnalyze.sh 
+sh logAnalyze.sh log/loginTest-20130221171704.log 
+sh logAnalyze.sh log/loginTest-20130221171704.log 
+sh logAnalyze.sh log/loginTest-20130221171704.log sample.txt 
+sakura sample.txt 
+telnetstg
+ls
+cd
+searchlog "Demo"
+searchlog "demo"
+ls
+cd text/
+ls
+cd toban/
+ls
+less 20130219.txt 
+sakura 20130219.txt 
+ls
+cd ..
+ls
+cd prodOperation/
+ls
+less 20130219.txt 
+less 20130219.txt 
+less 20130221.txt 
+less 20130222.txt 
+vi .bashrc 
+ls
+cd files/BO/
+ls
+cd Documents/
+ls
+cd order-my/
+ls
+cd operation/
+ls
+cd release/
+ls
+ls
+ls
+ls
+cd
+cd git/
+ls
+cd pullreq-test/
+ls
+git branch
+git branch -r
+git branch -a
+cd
+ls
+cd git 
+git clone  https://github.com/nisshiee/gitflow.git
+kill all
+ls
+cd git
+git clone
+git clone ssh://git@git.dev.rakuten.com:7999/NISSHIE/pullreq-test.git
+ls
+cd pullreq-test/
+ls
+ls
+gitk
+git log -a
+git fetch --all
+gitk
+git branch develop
+ls
+ls
+git branch
+git checkout develop
+ls
+ls
+cd ..
+ls
+rm -rf pullreq-test/
+git clone ssh://git@git.dev.rakuten.com:7999/NISSHIE/pullreq-test.git
+cd pullreq-test/
+ls
+git checkout develop
+ls
+ls
+gitk
+git fetch --all
+ls
+cd ..
+ls
+rm -rf pullreq-test/
+git clone ssh://git@git.dev.rakuten.com:7999/NISSHIE/pullreq-test.git
+ls
+cd pullreq-test/
+ls
+git log
+git branch
+git graph
+git log --all
+git branch
+git log --graph
+git log --all --graph
+ls -a
+ls .git/
+ls -a .git/
+git fetch
+git branch
+git fetch --al
+git fetch --all
+git branch
+cd ..
+ls
+cd ..
+ls
+man cvs
+vi .bashrc 
+setenv CVSROOT :pserver:otatakefumi01@dev-cvs:/home/cvs/dev
+export  CVSROOT=:pserver:otatakefumi01@dev-cvs:/home/cvs/dev
+echo $CVSROOT
+cvs co rms-doc/backoffice/order-my/ -d order-my
+cvs co -d order-my rms-doc/backoffice/order-my/
+ls
+ls
+ls files/BO
+mkdir files/BO/Documents
+mv order-my/ files/BO/Documents
+ls
+cd files/BO/Documents/
+ls
+cd order-my/
+ls
+cd operation/
+ls
+cd release/
+ls
+cd 2012
+ls
+find . -type f --print |
+find . -type f --print 
+find . -type f -print 
+find . -type f -print | grep 直カゴ
+find . -type f -print | grep Direct
+find . -type f -print | xargs grep Direct
+find . -type f -print | xargs grep 直カゴ
+ls
+cd 20120501/
+ls
+less before_release.txt 
+sakura after_release.txt 
+cd ..
+ls
+cd 20120517/
+ls
+less release.txt 
+sakura release.txt 
+cd ..
+ls
+cd 20120524/
+ls
+less release.txt 
+sakura release.txt 
+cat release | xargs grep 直カゴ
+cat release.txt | xargs grep 直かご
+nkf -u release.txt 
+nkf -u release.txt | xargs grep 直かご
+cat release.txt 
+nkf -u release.txt 
+nkf -u release.txt | xargs grep "直かご"
+grep release.txt 直
+grep 直 release.txt 
+ls
+cd shscript/loginChecker
+ls
+cd src/
+ls
+git status
+less logAnalyze.sh 
+ls
+less logAnalyze.sh 
+less logAnalyze.sh 
+git diff
+less logAnalyze.sh 
+ls
+ls
+less logAnalyze.sh 
+cd git
+git clone  https://github.com/nisshiee/gitflow.git
+git clone git@github.com:nisshiee/gitflow.git
+cd gitflow/
+git checkout 0.4.1_nisshiee-1.0
+ls
+git branch
+cd
+ls
+cd git/
+ls
+lrm -rf gitflow/
+ls
+rm -rf gitflow/
+ls
+git clone git@github.com:nisshiee/gitflow.git
+perlrebase
+ls
+rm -rf gitflow/
+git clone  https://github.com/nisshiee/gitflow.git
+rebaseall
+git clone  https://github.com/nisshiee/gitflow.git
+ls
+mv gitflow/ git
+cd git/
+ls
+cd gitflow/
+git checkout 0.4.1_nisshiee-1.0
+git branch
+gitk
+vi .gitmodules
+git submodule init
+git submodule update
+make install
+ls
+cd
+cd git/
+ls
+cd pullreq-test/
+ls
+git branch
+git flow init
+apt-cyg find getopt
+apt-cyg find util-linux
+apt-cyg install util-linux
+git flow init
+ls
+git branch
+ls
+git flow feature start
+git flow feature start test1
+ls
+gitk all
+gitk --all
+gitk --all &
+git merge origin/develop
+ls
+git flow feature start test1
+git branch
+ls
+vi test1.txt
+ls
+git status
+git add test1.txt 
+ls
+git commit -m "test commit"
+git status
+git flow feature finish test1
+git push origin develop
+git checkout -B develop origin/develop
+git flow feature start test1
+touch test1.txt
+git add test1.txt 
+git commit -m "test commit"
+git push origin feature/test1
+git push origin feature/test1
+git push origin feature/test1
+git push origin feature/test1
+cd
+git clone git@github.com:nisshiee/gitflow.git
+ls
+cd rm -rf gitflow/
+ rm -rf gitflow/
+git clone ssh://git@git.dev.rakuten.com:7999/NISSHIE/pullreq-test.git
+ls
+cd pullreq-test/
+ls
+git flow init
+ls
+git branch
+ls
+gitk --all
+gitk --all &
+cd
+cd git/pullreq-test/
+ls
+ls
+git branch
+git checkout develop
+git branch
+ls
+touch test2.txt
+git add test2.txt 
+git commit -m "test commit 2"
+git branch
+git push origin develop
+git checkout feature/test1
+git branch
+git push origin feature/test1
+ls
+cd
+sakura files/BO/Documents/order-my/operation/release/2012/20120524/release.txt 
+cd files/BO/Documents/order-my/operation/release/2012/20120524/; sakura release.txt 
+cd
+ls
+ls
+cd git/pullreq-test/
+ls
+gik
+gitk
+git fetch --all
+gitk
+.bashrc
+vi .bashrc
+ls
+ls -la
+rm -rf .bashrc 
+cd
+rm -rf .bashrc 
+ls -a
+printenv
+ls
+ls -a
+vi /etc/bash.bashrc 
+find / -type f -name bashrc
+find / -type f -name .bashrc
+lsof | grep .bashrc
+apt-cyg install lsof
+cd /proc/
+ls
+apt-cyg find whoslocking
+ls
+cd 4000/
+ls
+less fd/
+ls
+cd fd/
+ls
+ls -l
+less 1
+view 1 
+ccd 1 
+cd 1 
+ls
+less ..
+cd ..
+ls
+cd ..
+ls
+less 5832/
+ls
+cd 5832/
+ls
+cd fd/
+ls
+ls -l
+cd ..
+ls
+cd ..
+ls
+ls -l *
+ls -l * | less
+ls -l . | less
+ls -l ./ | less
+ls -l ./ | less
+ls 
+ls -l 3724/fd/
+ls -la 3724/fd/
+cd 3724/fd/
+ls
+cd ../..
+ls -l 3864/fd/
+ls -l 4364/fd/
+ls -l 5004/fd/
+ls -l 5832/fd/
+cygstart .
+cd
+ls
+cygstart 
+cygstart .
+ls -f
+ls -F
+ls
+ls
+ls -F
+ls
+ps aux
