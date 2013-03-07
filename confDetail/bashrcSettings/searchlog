@@ -1,0 +1,17 @@
+SEARCH_LOG_DIR="/home/takefumi.ota/text/toban/"
+function searchlog(){
+   if [ $# -eq 0 ]; then
+      echo "検索文字列を入力したください。"
+      exit 1
+   fi
+   for FILE in `find ${SEARCH_LOG_DIR} -type f`
+   do
+      RESULT=`grep $1 ${FILE}`
+      if [ ${#RESULT} -gt 0 ]; then
+         echo "========= ${FILE} ========="
+         grep $1 ${FILE}
+         echo "==========================="
+      fi
+   done
+}
+alias searchlog='searchlog $1'
