@@ -1,3 +1,18 @@
+#[How to Install git-flow and git-completion]
+# install git flow
+## wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash
+#
+# install bash-completion
+## apt-cyg install git-completion
+#
+# set git-completion
+## wget 'http://git.kernel.org/?p=git/git.git;a=blob_plain;f=contrib/completion/git-completion.bash;hb=HEAD' -O git-completion.bash
+## git-completion.bash /etc/bash-completion.d/git
+##
+### get git-prompt.sh from following url(github)
+### https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+### set git-prompt.sh at /etc/bash-completion.d/ 
+
 if [ -f $BASH_COMPLETION_DIR/git -a -f $BASH_COMPLETION_DIR/git-prompt.sh ]; then
 #  source $BASH_COMPLETION_DIR/git
   source $BASH_COMPLETION_DIR/git-prompt.sh
