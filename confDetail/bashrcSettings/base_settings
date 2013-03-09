@@ -16,3 +16,5 @@ function sakuraCaller(){
 }
 alias sakura='sakuraCaller'
 
+#apt-cygで接続する先のデフォルト設定
+alias apt-cyg='apt-cyg -m ftp://ftp.jaist.ac.jp/pub/cygwin/'
