@@ -1,7 +1,7 @@
 #.bashrc の基本設定たち
 
 #自分でインストールしたアプリにパスを通す
-export PATH=${PATH}:/home/takefumi.ota/programs/bin/
+export PATH=${PATH}:/home/${USERNAME}/programs/bin/
 
 #ls を色付け
 alias ls='ls --color'
@@ -16,3 +16,5 @@ function sakuraCaller(){
 }
 alias sakura='sakuraCaller'
 
+#apt-cygで接続する先のデフォルト設定
+alias apt-cyg='apt-cyg -m ftp://ftp.jaist.ac.jp/pub/cygwin/'
