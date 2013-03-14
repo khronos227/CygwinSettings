@@ -1,7 +1,7 @@
 #!/bin/sh
-CONF_ROOT="../confRoot"
-CONF_DETAIL="../confDetail"
-
+# 実行したディレクトリからconfRootへのパスを一時的に算出(..が混ざる形)
+CONF_ROOT="`dirname $0`/../confRoot"
+CONF_DETAIL="`dirname $0`/../confDetail"
 function release(){
    if [ $# -lt 2 ]; then
       echo "Usage: sh release.sh <release setting> <release dir>"
@@ -35,6 +35,7 @@ function release(){
    echo "# put conf detail"
    mkdir -p ${RELEASE_DIR}
    cp ${RELEASE_CONF_DETAIL}/* ${RELEASE_DIR}
+   echo "cp ${RELEASE_CONF_DETAIL}/* ${RELEASE_DIR}"
 
    echo ""
    echo "## finish"
