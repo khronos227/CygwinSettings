@@ -6,6 +6,11 @@ Release Note
 
 ### x.x.x
 
+### 1.1.0
+- hotfix for release tool(release.sh)
+-- change directory resolution logic
+-- to be able to release from directories except "tool/"
+
 ### 1.0.3
 - modify searchlog function
 -- remove unnecessary exit command
