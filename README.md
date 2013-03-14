@@ -6,6 +6,12 @@ Release Note
 
 ### x.x.x
 
+### 1.0.3
+- modify searchlog function
+-- remove unnecessary exit command
+-- change directory structure
+-- add operation option
+
 ### 1.0.2
 
 - fit difference between other PC env.
