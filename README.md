@@ -6,6 +6,11 @@ Release Note
 
 ### x.x.x
 
+### 1.1.1
+- modify sakura and git settings
+-- modify path of sakura editor
+-- add global config for git
+
 ### 1.1.0
 - hotfix for release tool(release.sh)
 -- change directory resolution logic

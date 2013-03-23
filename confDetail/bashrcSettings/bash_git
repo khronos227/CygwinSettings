@@ -1,6 +1,7 @@
 #[How to Install git-flow and git-completion]
 # install git flow
 ## wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash
+## apt-cyg install util-linux
 #
 # install bash-completion
 ## apt-cyg install git-completion
@@ -22,3 +23,11 @@ else
 fi
 
 alias gitk='gitk --all &'
+
+# ユーザ名を環境変数から設定
+git config --global user.name "${USERNAME}"
+# 色を設定
+git config --global color.ui true
+# エディタ設定
+git config --global core.editor vim
+
