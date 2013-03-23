@@ -12,7 +12,7 @@ alias grep='grep -n --color'
 #サクラエディタ利用
 function sakuraCaller(){
    local FILE=`cygpath -w $1`
-   /home/takefumi.ota/programs/programFilesX86/sakura/sakura ${FILE} &
+   /home/${USERNAME}/programs/programFilesX86/sakura/sakura ${FILE} &
 }
 alias sakura='sakuraCaller'
 
