@@ -6,3 +6,5 @@
 
 #ログ検索
 . ${SETTINGS_DIR}/searchlog
+
+. ${SETTINGS_DIR}/sl
