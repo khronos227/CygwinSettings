@@ -6,6 +6,10 @@ Release Note
 
 ### x.x.x
 
+### 1.1.2
+- add sl command
+-- set alias for sl command
+
 ### 1.1.1
 - modify sakura and git settings
 -- modify path of sakura editor
