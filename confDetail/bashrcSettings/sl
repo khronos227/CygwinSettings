@@ -1,0 +1,16 @@
+alias sl='sl.exe -l'
+
+#<手順>
+#apt-cyg install termcap
+#apt-cyg install libncurses-devel
+#apt-cyg install patch
+#
+#wget http://www.tkl.iis.u-tokyo.ac.jp/~toyoda/sl/sl.tar
+#wget http://www.izumix.org.uk/sl/sl5-1.patch
+#tar -xvf sl.tar
+#cd sl
+#patch -p1 < ../sl5-1.patch
+#
+#make CFLAGS='-I/usr/include/ncurses -L/usr/local/lib'
+#パスを通して、
+#aliasを設定(-lオプション入れないと、なかなか終わってくれません)
