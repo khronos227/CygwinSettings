@@ -1,4 +1,4 @@
-alias sl='sl.exe -l'
+alias sl='sl.exe -el'
 
 #<手順>
 #apt-cyg install termcap
@@ -13,4 +13,4 @@ alias sl='sl.exe -l'
 #
 #make CFLAGS='-I/usr/include/ncurses -L/usr/local/lib'
 #パスを通して、
-#aliasを設定(-lオプション入れないと、なかなか終わってくれません)
+#aliasを設定(-eオプション入れないと、Ctrl+Cで終了出来ません)
