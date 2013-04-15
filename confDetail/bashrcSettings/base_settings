@@ -18,3 +18,7 @@ alias sakura='sakuraCaller'
 
 #apt-cygで接続する先のデフォルト設定
 alias apt-cyg='apt-cyg -m ftp://ftp.jaist.ac.jp/pub/cygwin/'
+
+#PS1とwindowタイトル表示変更
+PS1='\[\033[01;32m\]\t\[\033[01;33m\] \w$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\]'
+PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
