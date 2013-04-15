@@ -1,0 +1,66 @@
+# 手順ひな形を検索(そのうち登録？)を行う
+function select_ope_tpl_mode(){
+   local LINE
+   while [ -z ${LINE} ]
+   do
+      echo -n "[tpl mode(help:0,show:1)]:>"
+      read LINE
+   done
+   case ${LINE} in
+   0)
+      echo "0:help"
+      echo "1:show template"
+      #echo "2:register template"
+      ;;
+   1)
+      show_template_list
+      ;;
+   *)
+      echo "unexpected mode is selected"
+      return
+      ;;
+   esac
+}
+
+function show_template_list(){
+   local DIR=`realpath ~/text/operations/`
+
+   echo "plz select number what you wanna see"
+
+   local FILES=(`ls $DIR`)
+   local MAX_INDEX=`expr ${#FILES[@]} - 1`
+   for INDEX in `seq 0 ${MAX_INDEX}`
+   do
+      echo ${INDEX}:${FILES[${INDEX}]}
+   done
+
+   local LINE
+   while [ -z ${LINE} ]
+   do
+      echo -n "[input number]:>"
+      read LINE
+   done
+
+   local FILE=${FILES[${INDEX}]}
+   echo "selected file:${FILE}"
+
+   if [ ${LINE} -lt 0 -a ${LINE} -gt ${MAX_INDEX} ]; then
+      echo "inputted number is invalid" 
+      return
+   fi
+   echo "show tenplate"
+   show_template "${DIR}" "${FILE}"
+}
+
+function show_template(){
+   local DIR=$1
+   local FILE=$2
+   if [ ! -e ${DIR}${FILE} ]; then
+      echo "${DIR}${FILE} is not found.."
+      return
+   fi
+   cat ${DIR}${FILE}
+}
+
+alias operations='select_ope_tpl_mode'
+
