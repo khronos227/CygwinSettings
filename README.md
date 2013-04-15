@@ -6,6 +6,10 @@ Release Note
 
 ### x.x.x
 
+### 1.1.3
+- change sl command option(@ alias)
+- .gitignore to not commit swp files
+
 ### 1.1.2
 - add sl command
 -- set alias for sl command
