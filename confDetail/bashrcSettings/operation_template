@@ -23,7 +23,7 @@ function select_ope_tpl_mode(){
 }
 
 function show_template_list(){
-   local DIR=`realpath ~/text/operations/`
+   local DIR="`realpath ~/text/operations/`/"
 
    echo "plz select number what you wanna see"
 
@@ -59,7 +59,9 @@ function show_template(){
       echo "${DIR}${FILE} is not found.."
       return
    fi
+   echo "===== ${DIR}${FILE} ====="
    cat ${DIR}${FILE}
+   echo "========================="
 }
 
 alias operations='select_ope_tpl_mode'
