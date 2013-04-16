@@ -1,0 +1,111 @@
+# 手順ひな形を検索(そのうち登録？)を行う
+function select_ope_tpl_mode(){
+   local LINE
+   while [ -z ${LINE} ]
+   do
+      echo -n "[tpl mode(help:0,show:1,reg:2)]:>"
+      read LINE
+   done
+   case ${LINE} in
+   0)
+      echo "0:help"
+      echo "1:show template"
+      echo "2:register template"
+      ;;
+   1)
+      show_template_list
+      ;;
+   2)
+      register_template
+      ;;
+   *)
+      echo "unexpected mode is selected"
+      return
+      ;;
+   esac
+}
+
+function show_template_list(){
+   local DIR=${OPERATION_TEMPLATE_DIR}
+
+   echo "plz select number what you wanna see"
+
+   local FILES=(`ls $DIR`)
+   local MAX_INDEX=`expr ${#FILES[@]} - 1`
+   for INDEX in `seq 0 ${MAX_INDEX}`
+   do
+      echo ${INDEX}:${FILES[${INDEX}]}
+   done
+
+   local LINE
+   while [ -z ${LINE} ]
+   do
+      echo -n "[input number]:>"
+      read LINE
+   done
+
+   local FILE=${FILES[${INDEX}]}
+   echo "selected file:${FILE}"
+
+   if [ ${LINE} -lt 0 -a ${LINE} -gt ${MAX_INDEX} ]; then
+      echo "inputted number is invalid" 
+      return
+   fi
+   echo "show tenplate"
+   show_template "${DIR}" "${FILE}"
+}
+
+function show_template(){
+   local DIR=$1
+   local FILE=$2
+   if [ ! -e ${DIR}${FILE} ]; then
+      echo "${DIR}${FILE} is not found.."
+      return
+   fi
+   echo "===== ${DIR}${FILE} ====="
+   cat ${DIR}${FILE}
+   echo "========================="
+}
+
+function register_template(){
+   local OPE_NAME
+   while [ -z ${OPE_NAME} ]
+   do
+      echo -n "[operation name]:>"
+      read OPE_NAME
+   done
+   OPE_NAME=`echo ${OPE_NAME} | sed 's/ /_/g'`
+   echo "Task Name:${OPE_NAME}"
+   local FILE="${OPERATION_TEMPLATE_DIR}${OPE_NAME}.tpl"
+   if [ -e ${FILE} ]; then
+      echo "this operation is existing (start edit)"
+      sleep 2
+      vi ${FILE}
+   else
+      echo "register new operation:${OPE_NAME}"
+      makeNewOperation ${FILE}
+   fi
+}
+
+function makeNewOperation(){
+   local OPE_FILE=$1
+   local ORIGIN_TPL="${ORIGIN_OPERATION_TEMPLATE_DIR}ope.tpl"
+
+   #ベースを持ってくる
+   cp ${ORIGIN_TPL} ${OPE_FILE}
+   #持ってきた時点でのファイルサイズを確認
+   local BEFORE_FILE_SIZE=`wc -c < ${OPE_FILE}`
+
+   vi ${OPE_FILE}
+
+   local AFTER_FILE_SIZE=`wc -c < ${OPE_FILE}` 
+   if [ ${AFTER_FILE_SIZE} -gt ${BEFORE_FILE_SIZE} ]; then
+      echo "new template is created"
+   else
+      echo "ceating template is canceled"
+      rm ${OPE_FILE}
+   fi
+}
+
+alias operations='select_ope_tpl_mode'
+

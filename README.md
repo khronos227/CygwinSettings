@@ -6,6 +6,12 @@ Release Note
 
 ### x.x.x
 
+### 1.2.0
+- add setting of PS1 and window title
+- add function to show contents of template
+- make operation template addition function
+- add sleep when edit existing operation
+
 ### 1.1.3
 - change sl command option(@ alias)
 - .gitignore to not commit swp files
