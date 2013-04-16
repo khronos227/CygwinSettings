@@ -1,0 +1,9 @@
+#グローバル変数群
+
+#作業ログ(当番用)置き場
+SEARCH_LOG_DIR="`realpath ~/text/logs`/"
+
+#手順書テンプレート置き場
+OPERATION_TEMPLATE_DIR="`realpath ~/text/operations/`/"
+#ベーステンプレート置き場
+ORIGIN_OPERATION_TEMPLATE_DIR="${SETTINGS_DIR}/tpl/"
