@@ -1,3 +1,6 @@
+#グローバル変数読み込み
+. ${SETTINGS_DIR}/conf/vars.rc
+
 #基本設定
 . ${SETTINGS_DIR}/base_settings
 
@@ -8,3 +11,6 @@
 . ${SETTINGS_DIR}/searchlog
 
 . ${SETTINGS_DIR}/sl
+
+. ${SETTINGS_DIR}/operation_template
+

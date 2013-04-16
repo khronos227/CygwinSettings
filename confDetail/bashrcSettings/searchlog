@@ -1,4 +1,3 @@
-SEARCH_LOG_DIR="/home/takefumi.ota/text/logs/"
 function searchlog(){
    local DIR=${SEARCH_LOG_DIR}
    if [ $# -eq 0 ]; then

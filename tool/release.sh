@@ -34,8 +34,8 @@ function release(){
  
    echo "# put conf detail"
    mkdir -p ${RELEASE_DIR}
-   cp ${RELEASE_CONF_DETAIL}/* ${RELEASE_DIR}
-   echo "cp ${RELEASE_CONF_DETAIL}/* ${RELEASE_DIR}"
+   cp -r ${RELEASE_CONF_DETAIL}/* ${RELEASE_DIR}
+   echo "cp -r ${RELEASE_CONF_DETAIL}/* ${RELEASE_DIR}"
 
    echo ""
    echo "## finish"
