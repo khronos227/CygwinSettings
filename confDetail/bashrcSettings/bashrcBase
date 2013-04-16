@@ -11,3 +11,6 @@
 . ${SETTINGS_DIR}/searchlog
 
 . ${SETTINGS_DIR}/sl
+
+. ${SETTINGS_DIR}/operation_template
+

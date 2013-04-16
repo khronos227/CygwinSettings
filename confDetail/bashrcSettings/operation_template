@@ -78,7 +78,8 @@ function register_template(){
    echo "Task Name:${OPE_NAME}"
    local FILE="${OPERATION_TEMPLATE_DIR}${OPE_NAME}.tpl"
    if [ -e ${FILE} ]; then
-      echo "this operation is existing"
+      echo "this operation is existing (start edit)"
+      sleep 2
       vi ${FILE}
    else
       echo "register new operation:${OPE_NAME}"
@@ -99,7 +100,7 @@ function makeNewOperation(){
 
    local AFTER_FILE_SIZE=`wc -c < ${OPE_FILE}` 
    if [ ${AFTER_FILE_SIZE} -gt ${BEFORE_FILE_SIZE} ]; then
-      echo "template is created"
+      echo "new template is created"
    else
       echo "ceating template is canceled"
       rm ${OPE_FILE}
