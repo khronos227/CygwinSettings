@@ -54,4 +54,4 @@ Release Note
 - first version
 - How to release
     cd tool/
-    sh release.sh <setting name> <dir name for detail setting>
+    sh release.sh <setting name> <dir name for detail setting> 
